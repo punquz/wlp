@@ -1,0 +1,272 @@
+
+*{box-sizing: border-box;margin: 0;padding: 0;font-family: arial;}
+html,body{
+    max-width: 100%;
+    overflow-x: hidden;
+    
+}
+ul,li{
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.headline{
+    color: #42b0f4;
+    font-size: 44px;
+    outline: none;
+    text-align: center;
+}
+.underline{
+    text-align: center;
+    color:#42b0f4;
+}
+/*sidenav css*/
+.sidenav {
+    height: 100%;
+    min-width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #00A0E9;
+    overflow-x: hidden;
+    padding-top: 20px;
+    padding-top: 0;
+}
+
+#unique{
+    height: 95px;
+}
+
+
+.sidenav .logo,
+.sidenav .nav-link{
+    padding: 16px 8px 16px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    border-bottom: 1px solid #ccc;
+    display: block;
+    text-align: center;
+    padding-bottom: 16px;
+}
+
+.sidenav a:hover{
+    background-color: rgba(255,255,255,0.1);
+    -moz-transition:all 0.3s linear;
+    -webkit-transition:all 0.3s linear;
+    -o-transition:all 0.3s linear;
+    -ms-transition:all 0.3s linear;
+}
+
+.sidenav .special2{
+    font-size: 26px;
+    color: #f2f2f2;
+    text-align: center;
+    padding-top: 8px;
+
+}
+
+.logo_text{
+    color: #f2f2f2;
+    text-align: center;
+    padding-top: 8px;
+    display: block;
+}
+
+.logo_text_small{
+    font-size: 20px;
+}
+
+.logo_text_big{
+    font-size: 26px;
+}
+
+.nav-unshown{
+    display: none;
+}
+
+/*container css*/
+.container{
+    margin-left: 250px;
+    background-color: #d3d3d3; 
+}
+
+/*career css*/
+.career{
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/*form css*/
+
+label.lbsp{
+    padding: 12px 12px 12px 0;
+    display: block;
+    font-weight: bold;
+}
+
+.row .col-25{
+    
+    display: inline-block;
+    width: 49%;
+}
+
+input[type=text],select{
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+textarea{
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  width: 100%;
+}
+
+input[type=submit] {
+    background-color: #00A0E9;
+    font-size: 30px;
+    color: #FFF;
+    padding: 10px 50px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 36.50%;
+}
+
+#special{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+/*media queries*/
+
+@media screen and (max-width: 768px) {
+
+    /* Navigation SP */
+    .sidenav{
+        height: 50px;
+        min-width: 100%;
+        overflow-x: visible;
+        z-index: 1;
+    }
+
+    .sidenav .logo {
+        padding: 4px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        max-width: 170px;
+        height: 50px;
+        border: none;
+    }
+
+    #unique{
+        width: 42px;
+        height: 42px;
+        margin-right: 4px;
+        order: 1;
+    }
+
+    .logo_text{
+        font-size:15px;
+        padding: 0;
+        text-align: left;
+    }
+
+    .logo_text_small{
+        order: 2;
+    }
+
+    .logo_text_big{
+        order: 3;
+    }
+
+    .sp-nav{
+        position: absolute;
+        width: 50%;
+        margin-left: auto;
+        background-color: #00A0E9;
+        border-top: 1px solid #ccc;
+        overflow-y: hidden;
+        z-index: 2;
+        right: -100%;
+        transition: right 0.5s ease-out;
+        -o-transition: right 0.5s ease-out; /* opera */
+        -moz-transition: right 0.5s ease-out; /* firefox */
+        -webkit-transition: right 0.5s ease-out; /* chrome, safari */
+        -ms-transition: right 0.5s ease-out; /* ie */
+    }
+
+    #nav-input:checked ~ .sp-nav{
+        right: 0;
+    }
+
+    #nav-toggle{
+        display: block;
+        vertical-align: middle;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        right: 10px;
+        top: 0px;
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+
+    #nav-toggle span,
+    #nav-toggle span:before,
+    #nav-toggle span:after{
+        position: absolute;
+        height: 5px;
+        width: 30px;
+        border-radius: 3px;
+        background: #fff;
+        display: block;
+        content: '';
+        cursor: pointer;
+    }
+
+    #nav-toggle span:before{
+        bottom: -10px;
+    }
+
+    #nav-toggle span:after{
+        bottom: -20px;
+    }
+
+    /* Add Magtop top for the height of navigation */
+
+    .container{
+        margin-left: 0;
+        margin-top: 50px;
+    }
+    
+    .career{
+        margin: 0 auto;
+        width: 100%;
+    }
+    .row .col-25{
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+    .headline{
+        font-size: 24px;
+    }
+    input[type=submit]{
+        position: relative;
+        left:-60px;
+    }
